@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@clerk/clerk-react": "^5.33.0",
+    "@reduxjs/toolkit": "^2.8.2",
+    "konva": "^9.3.22",
+    "react": "^19.1.0",
+    "react-colorful": "^5.6.1",
+    "react-dom": "^19.1.0",
+    "react-konva": "^19.0.7",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.6.3",
+    "uuid": "^11.1.0"
+  }
+}
