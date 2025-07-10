@@ -1,0 +1,130 @@
+/* Global Style */
+body {
+  margin: 0;
+  background-color: white; /* Force white background */
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
+
+/* App Layout */
+.app-wrapper {
+  display: flex;
+  padding: 5rem 3rem;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.left-column {
+  flex: 1;
+  max-width: 50%;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: black;
+}
+
+.description {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.right-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.crayon-image {
+  max-width: 400px;
+  height: auto;
+}
+
+/* 🎨 SVG Circle Background */
+.svg-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.circle-svg {
+  opacity: 0.3;
+  animation: floatCircle 10s infinite ease-in-out alternate;
+}
+
+/* Colored Circles */
+.circle-1 { fill: #ef4444; animation-delay: 0s; }   /* 🔴 Red */
+.circle-2 { fill: #f97316; animation-delay: 1s; }   /* 🟠 Orange */
+.circle-3 { fill: #facc15; animation-delay: 2s; }   /* 🟡 Yellow */
+.circle-4 { fill: #22c55e; animation-delay: 3s; }   /* 🟢 Green */
+
+@keyframes floatCircle {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.3);
+  }
+  100% {
+    transform: translateY(10px) scale(1);
+  }
+}
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  background-color: white !important;
+  min-height: 100vh;
+  width: 100vw;
+}
+/* Existing styles ... */
+
+.crayon-image {
+  max-width: 400px;
+  height: auto;
+  animation: penFloat 4s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+/* Pen floating/drawing animation */
+@keyframes penFloat {
+  0% {
+    transform: translate(0, 0) rotate(-5deg) scale(1);
+  }
+  50% {
+    transform: translate(10px, -10px) rotate(2deg) scale(1.05);
+  }
+  100% {
+    transform: translate(-10px, 5px) rotate(-3deg) scale(1);
+  }
+}
+.pen-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transform: translateY(20px); /* Push it down to align nib */
+}
+
+.crayon-image {
+  max-width: 400px;
+  height: auto;
+  margin-bottom: -20px; /* Overlap with line */
+}
+
+.drawing-line {
+  margin-top: -10px; /* bring line closer to nib */
+  z-index: 1;
+}
+
