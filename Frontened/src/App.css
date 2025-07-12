@@ -128,3 +128,62 @@ body,
   z-index: 1;
 }
 
+.btn-get-started {
+  padding: 0.75rem 2.25rem;
+  background: linear-gradient(135deg, #3a90ff 0%, #00e5bf 100%);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 9999px;
+  /* full pill */
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-get-started:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+}
+
+.btn-get-started:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Common look / animation for added shapes */
+.shape-svg {
+  opacity: 0.28;
+  animation: float 22s ease-in-out infinite;
+}
+
+/* Give each its own hue and timing */
+.triangle {
+  fill: #ffb627;
+  animation-delay: 3s;
+}
+
+.square {
+  fill: #ff3b6f;
+  animation-delay: 6s;
+}
+
+.star {
+  fill: #ffd700;
+  animation-delay: 9s;
+}
+
+/* Re‑use (or add) float keyframes if not already present */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(8deg) scale(1.05);
+  }
+}
